@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:labor/screens/endScreenOne.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class VoteMain extends StatefulWidget {
@@ -152,12 +153,17 @@ class _VoteMainState extends State<VoteMain> {
             ),
           ]),
         ),
+        SizedBox(height: 10),
         Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             InkWell(
                 onTap: () {
                   if (widget.setbool == false) {
                     widget.setbool = true;
+                    setState(() {});
+                  } else {
+                    widget.setbool = false;
                     setState(() {});
                   }
                 },
@@ -165,11 +171,60 @@ class _VoteMainState extends State<VoteMain> {
                   child: Text(
                     "진행예정",
                     style: TextStyle(
-                        color: widget.setbool ? Colors.blue : Colors.grey),
+                        color: widget.setbool ? Colors.blue : Colors.grey,
+                        fontSize: 25),
+                  ),
+                )),
+            SizedBox(width: 50),
+            InkWell(
+                onTap: () {
+                  if (widget.setbool == false) {
+                    widget.setbool = true;
+                    setState(() {});
+                  } else {
+                    widget.setbool = false;
+                    setState(() {});
+                  }
+                },
+                child: Container(
+                  child: Text(
+                    "진행완료",
+                    style: TextStyle(
+                        color: widget.setbool ? Colors.grey : Colors.blue,
+                        fontSize: 25),
                   ),
                 ))
           ],
-        )
+        ),
+        SizedBox(height: 10),
+        (widget.setbool)
+            ? Container(
+                padding: EdgeInsetsDirectional.symmetric(horizontal: 20),
+                child: Column(
+                  children: [
+                    Image.asset("assets/images/vote_1.png"),
+                    SizedBox(height: 30),
+                    Image.asset("assets/images/vote_2.png"),
+                  ],
+                ),
+              )
+            : Container(
+                padding: EdgeInsetsDirectional.symmetric(horizontal: 20),
+                child: Column(
+                  children: [
+                    Image.asset("assets/images/vote_3.png"),
+                    SizedBox(height: 30),
+                    InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => EndScreenOne()));
+                        },
+                        child: Image.asset("assets/images/vote_4.png")),
+                  ],
+                ),
+              )
       ],
     ));
   }

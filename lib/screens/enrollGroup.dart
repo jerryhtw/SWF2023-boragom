@@ -94,7 +94,7 @@ class _EnrollGroupState extends State<EnrollGroup> {
                                               Row(
                                                 children: [
                                                   Image.asset(
-                                                      'assets/images/ellipse.png',
+                                                      'assets/images/profile1.png',
                                                       height: 58,
                                                       width: 58),
                                                   SizedBox(width: 8),
@@ -139,7 +139,7 @@ class _EnrollGroupState extends State<EnrollGroup> {
                                               Row(
                                                 children: [
                                                   Image.asset(
-                                                      'assets/images/ellipse.png',
+                                                      'assets/images/profile2.png',
                                                       height: 58,
                                                       width: 58),
                                                   SizedBox(width: 8),
@@ -173,7 +173,7 @@ class _EnrollGroupState extends State<EnrollGroup> {
                                               Row(
                                                 children: [
                                                   Image.asset(
-                                                      'assets/images/ellipse.png',
+                                                      'assets/images/profile3.png',
                                                       height: 58,
                                                       width: 58),
                                                   SizedBox(width: 8),

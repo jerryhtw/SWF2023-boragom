@@ -12,7 +12,7 @@ transferEther(int _value) async {
       dotenv.env['PRIVATE_KEY']!; // Replace with your private key
   final String contractAddress = dotenv.env['TARGET']!;
   var client = Web3Client(rpcUrl, Client());
-  var amount = sqrt(_value).floor() * 10;
+  var amount = sqrt(_value).floor() * 10 ^ 15;
 
   var credentials = EthPrivateKey.fromHex(privateKey);
   final address = credentials.address;

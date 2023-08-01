@@ -72,19 +72,27 @@ class FrontPage extends StatelessWidget {
                     Center(
                       child: Row(
                         children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15),
-                              color: Color(0xffE5EFFB),
-                            ),
-                            width: 152,
-                            height: 48,
-                            child: Center(
-                              child: Text("송금하기",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 16,
-                                      color: Color(0xff0671E6))),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => EnrollGroup()));
+                            },
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(15),
+                                color: Color(0xffE5EFFB),
+                              ),
+                              width: 152,
+                              height: 48,
+                              child: Center(
+                                child: Text("송금하기",
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 16,
+                                        color: Color(0xff0671E6))),
+                              ),
                             ),
                           ),
                           SizedBox(width: 8),
@@ -122,7 +130,7 @@ class FrontPage extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Image.asset('assets/images/ellipse.png',
+                        Image.asset('assets/images/profile1.png',
                             height: 58, width: 58),
                         SizedBox(width: 8),
                         Column(
@@ -146,12 +154,7 @@ class FrontPage extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               InkWell(
-                                onTap: () {
-                                  Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => EnrollGroup()));
-                                },
+                                onTap: () {},
                                 child: Image.asset("assets/images/arrow.png",
                                     width: 8, height: 16),
                               )
@@ -201,7 +204,7 @@ class FrontPage extends StatelessWidget {
                   color: Color(0xffFFFFFF)),
               child: Row(
                 children: [
-                  Image.asset('assets/images/ellipse.png',
+                  Image.asset('assets/images/profile2.png',
                       height: 58, width: 58),
                   SizedBox(width: 8),
                   Column(
@@ -244,7 +247,7 @@ class FrontPage extends StatelessWidget {
                   color: Color(0xffFFFFFF)),
               child: Row(
                 children: [
-                  Image.asset('assets/images/ellipse.png',
+                  Image.asset('assets/images/profile3.png',
                       height: 58, width: 58),
                   SizedBox(width: 8),
                   Column(
