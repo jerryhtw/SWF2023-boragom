@@ -1,4 +1,4 @@
-# labor
+# mini-DAO web3seoul hackathon project
 
 A new Flutter project.
 
